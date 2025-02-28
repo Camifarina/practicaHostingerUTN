@@ -1,0 +1,201 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root{
+    --color_texto: #ffffff;
+    --color_fondo: #1f1346;
+    --color_card: #2f1c6a;
+    --color_iconos_cards: #673de6;
+    --color_boton: #fc5185;
+    --color_boton_hover: #d63163;
+    --color_texto_nav: #1d1e20;
+
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "DM Sans", serif;
+    
+}
+
+h1{
+    font-size: 24px;
+}
+h2{
+    font-size: 18px;
+}
+p{
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.oculto{
+    display: none;
+}
+
+.header{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    background-color: white;
+    box-shadow: 0px 5px 25px #673de6d3;
+    position: sticky;
+    top: 0;
+}
+
+.header img{
+    width: 147px;
+}
+.header .icono_menu{
+    background-color: transparent;
+    border: none;
+    font-size: 26px;
+    padding: 3px;
+    color: black;
+}
+
+.header .barra_navegacion{
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 38px;
+}
+.header .barra_navegacion .texto_nav{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color_texto_nav);
+}
+a:-webkit-any-link{
+    text-decoration: none;
+    color: var(--color_texto_nav);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.header .barra_navegacion .boton_ingresar{
+    background-color: transparent;
+    border: 2px solid var(--color_texto_nav);
+    font-weight: 700;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.header .barra_navegacion .div_nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+}
+
+
+.conteiner{
+    padding: 56px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color_fondo);
+    color: var(--color_texto);
+}
+
+.conteiner .cards-conteiner{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 8px 0;
+}
+
+.conteiner .cards-conteiner .card{
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    background-color: var(--color_card);
+    gap: 16px;
+    text-align: left;
+    border-radius: 16px;
+}
+
+.conteiner .cards-conteiner .card .icono_card{
+    font-size: 24px;
+    background-color: var(--color_iconos_cards);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    width: 40px;
+    height: 40px;
+}
+
+.conteiner .boton_section{
+    background-color: var(--color_boton);
+    color: var(--color_texto);
+    border: none;
+    border-radius: 8px;
+    width: 168px;
+    height: 48px;
+    cursor: pointer;
+}
+.conteiner .boton_section:hover{
+    background-color: var(--color_boton_hover);
+    transition: 50ms ease-in-out;
+}
+
+@media screen and (min-width: 540px) {
+    .conteiner .cards-conteiner, .conteiner .titulo, .conteiner .texto{
+        max-width: 508px;
+    }
+}
+
+@media screen and (min-width: 770px){
+    .conteiner .cards-conteiner, .conteiner .titulo, .conteiner .texto{
+        max-width: 688px;
+    }
+        .conteiner{
+            padding: 64px 0;
+        }
+    
+}
+
+@media screen and (min-width: 1025px){
+    h1{
+        font-size: 36px;
+    }
+    .oculto{
+        display: flex;
+    }
+
+    .header{
+        padding: 20px 40px;
+    }
+
+    .conteiner{
+        padding: 80px 0;
+    }
+
+    .conteiner .cards-conteiner, .conteiner .titulo, .conteiner .texto{
+        max-width: 1250px;
+        padding: 0 55px;
+    }
+
+    .conteiner .cards-conteiner{
+        flex-direction: row;
+        gap: 24px;
+
+    }
+
+    .conteiner .cards-conteiner .card{
+        max-height: 304px;
+        flex:1;
+    }
+    .header .icono_menu{
+        display: none;
+    }
+
+}

@@ -46,3 +46,28 @@ function sumar (num1, num2){
 }
 
 sumar(numero1, numero2) */
+
+/* OBJETOS */
+
+
+const user = {
+    name: 'pepe',
+    lastname: 'suarez',
+    'user preferences':{
+        theme: 'dark-mode',
+        lang: 'spanish'
+    },
+    'user info':{
+        'created_art': '18/9/2005',
+        'adress': 'av Siempre Viva 742',
+        tel: '+22 1323-2122'
+    }
+}
+
+console.log('El usuario ' + user['name'] + ' ' + user['lastname'] + ' tiene las preferencias de usuario en: \nModo: ' + user['user preferences']['theme'] + '\nLenguaje: ' + user['user preferences']['lang'])
+console.log('El usuario ' + user['name'] + ' ' + user['lastname'] + ' creó su cuenta el ' + user['user info']['created_art'] + '. Vive en ' + user['user info']['adress'] + ' y su telefono es ' + user['user info']['tel'])
+
+console.log(`El usuario ${user.name} ${user.lastname} tiene las preferencias en:
+    -Modo: ${user['user preferences'].theme}
+    -Lenguaje: ${user['user preferences'].lang}`
+)
